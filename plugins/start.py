@@ -87,7 +87,7 @@ async def start_command(client: Client, message: Message):
             if a==2:
                 reply_markup = InlineKeyboardMarkup(
                     [[
-                        InlineKeyboardButton("ᴍᴜsᴛ ᴊᴏɪɴ", url="https://t.me/Anime_Madness")
+                        InlineKeyboardButton("ᴍᴜsᴛ ᴊᴏɪɴ", url="https://t.me/Cultured_Madness")
                     ]]
                 )
 
@@ -116,15 +116,15 @@ async def start_command(client: Client, message: Message):
             except:
                 pass
 
-        await message.reply_text(f"<b><i>» Save These Files In Your Saved Messages. They Will Be Deleted In {Timute} Minutes.\n» Must Join\n1. ⚡️⚡️@Anime_Madness⚡️⚡️\n2. ⚡️⚡️@Weebs_Madness⚡️⚡️</i></b>")
+        await message.reply_text(f"<b><i>» Save These Files In Your Saved Messages. They Will Be Deleted In {Timute} Minutes.\n» Must Join\n1. ⚡️⚡️@Cultured_Madness⚡️⚡️\n2. ⚡️⚡️@Anime_Madness⚡️⚡️</i></b>")
             
         return
     else:
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ", url="https://t.me/Anime_Madness"),
-                    InlineKeyboardButton("ᴏɴɢᴏɪɴɢ ᴄʜᴀɴɴᴇʟ", url="https://t.me/Ongoing_Madness")
+                    InlineKeyboardButton("ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ", url="https://t.me/Cultured_Madness"),
+                    InlineKeyboardButton("ʜᴇɴᴛᴀɪ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+0VRiOl0R0n02NzY1")
                 ],
                 [
                     InlineKeyboardButton(" ᴀʙᴏᴜᴛ", callback_data="about"),

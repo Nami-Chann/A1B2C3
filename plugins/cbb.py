@@ -16,7 +16,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 [
                     [
                     InlineKeyboardButton("⚡️ Help", callback_data = "help"),
-                    InlineKeyboardButton('🍁 ᴀɴɪᴍᴇ', url='https://t.me/Anime_Madness')
+                    InlineKeyboardButton('🍁 ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Cultured_Madness')
                     ]
                 ]
             )
@@ -52,7 +52,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data="close"),
-                        InlineKeyboardButton('🍁 ᴀɴɪᴍᴇ', url='https://t.me/Anime_Madness')
+                        InlineKeyboardButton('🍁 ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Cultured_Madness')
                     ]
                 ]
             )

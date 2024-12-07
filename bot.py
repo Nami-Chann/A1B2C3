@@ -44,7 +44,7 @@ class Bot(Client):
                 if not link:
                     await self.export_chat_invite_link(FORCE_SUB_CHANNEL_1)
                     link = (await self.get_chat(FORCE_SUB_CHANNEL_1)).invite_link
-                self.invitelink = link
+                FSUBLINK1 = link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"
@@ -64,7 +64,7 @@ class Bot(Client):
                 if not link:
                     await self.export_chat_invite_link(FORCE_SUB_CHANNEL_2)
                     link = (await self.get_chat(FORCE_SUB_CHANNEL_2)).invite_link
-                self.invitelink2 = link
+                FSUBLINK2 = link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"
@@ -82,7 +82,7 @@ class Bot(Client):
             try:
                 # Generate a join request link for FORCE_SUB_CHANNEL_3
                 invite_link = await self.create_chat_invite_link(FORCE_SUB_CHANNEL_3, creates_join_request=True)
-                self.invitelink3 = invite_link.invite_link  # Store the join request link
+                FSUBLINK3 = invite_link.invite_link  # Store the join request link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"
@@ -101,7 +101,7 @@ class Bot(Client):
             try:
                 # Generate a join request link for FORCE_SUB_CHANNEL_3
                 invite_link = await self.create_chat_invite_link(FORCE_SUB_CHANNEL_4, creates_join_request=True)
-                self.invitelink4 = invite_link.invite_link  # Store the join request link
+                FSUBLINK4 = invite_link.invite_link  # Store the join request link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"

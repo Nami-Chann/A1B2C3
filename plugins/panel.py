@@ -50,7 +50,7 @@ async def update_admins(client, message):
         await message.reply_text(f"Error: {str(e)}")
 
 
-@Client.on_message(filters.command("Fsub1") & filters.user(OWNER))
+@Client.on_message(filters.command("Fsub1") & filters.user(ADMINS))
 async def update_fsub1(client, message):
     try:
         new_value = int(message.text.split()[1])
@@ -70,7 +70,7 @@ async def update_fsub2(client, message):
         await message.reply_text("Usage: `/Fsub2 <new_channel_id>`")
 
 
-@Client.on_message(filters.command("Fsub3") & filters.user(OWNER))
+@Client.on_message(filters.command("Fsub3") & filters.user(ADMINS))
 async def update_fsub3(client, message):
     try:
         new_value = int(message.text.split()[1])
@@ -80,7 +80,7 @@ async def update_fsub3(client, message):
         await message.reply_text("Usage: `/Fsub3 <new_channel_id>`")
 
 
-@Client.on_message(filters.command("Fsub4") & filters.user(OWNER))
+@Client.on_message(filters.command("Fsub4") & filters.user(ADMINS))
 async def update_fsub4(client, message):
     try:
         new_value = int(message.text.split()[1])

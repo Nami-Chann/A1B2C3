@@ -20,10 +20,10 @@ from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, CHANN
 from dataconfig import FORCE_SUB_CHANNEL_1, FORCE_SUB_CHANNEL_2, FORCE_SUB_CHANNEL_3, FORCE_SUB_CHANNEL_4
 
 class Bot(Client):
-    Bot.FSUBLINK1 = None
-    Bot.FSUBLINK2 = None
-    Bot.FSUBLINK3 = None
-    Bot.FSUBLINK4 = None    
+    FSUBLINK1 = None
+    FSUBLINK2 = None
+    FSUBLINK3 = None
+    FSUBLINK4 = None    
 
     def __init__(self):
         super().__init__(

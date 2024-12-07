@@ -20,10 +20,7 @@ from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, CHANN
 from dataconfig import FORCE_SUB_CHANNEL_1, FORCE_SUB_CHANNEL_2, FORCE_SUB_CHANNEL_3, FORCE_SUB_CHANNEL_4
 
 class Bot(Client):
-    FSUBLINK1 = None
-    FSUBLINK2 = None
-    FSUBLINK3 = None
-    FSUBLINK4 = None    
+    
 
     def __init__(self):
         super().__init__(
@@ -49,7 +46,7 @@ class Bot(Client):
                 if not link:
                     await self.export_chat_invite_link(FORCE_SUB_CHANNEL_1)
                     link = (await self.get_chat(FORCE_SUB_CHANNEL_1)).invite_link
-                Bot.FSUBLINK1 = link
+                self.FSUBLINK1 = link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"
@@ -69,7 +66,7 @@ class Bot(Client):
                 if not link:
                     await self.export_chat_invite_link(FORCE_SUB_CHANNEL_2)
                     link = (await self.get_chat(FORCE_SUB_CHANNEL_2)).invite_link
-                Bot.FSUBLINK2 = link
+                self.FSUBLINK2 = link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"
@@ -87,7 +84,7 @@ class Bot(Client):
             try:
                 # Generate a join request link for FORCE_SUB_CHANNEL_3
                 invite_link = await self.create_chat_invite_link(FORCE_SUB_CHANNEL_3, creates_join_request=True)
-                Bot.FSUBLINK3 = invite_link.invite_link  # Store the join request link
+                self.FSUBLINK3 = invite_link.invite_link  # Store the join request link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"
@@ -106,7 +103,7 @@ class Bot(Client):
             try:
                 # Generate a join request link for FORCE_SUB_CHANNEL_3
                 invite_link = await self.create_chat_invite_link(FORCE_SUB_CHANNEL_4, creates_join_request=True)
-                Bot.FSUBLINK4 = invite_link.invite_link  # Store the join request link
+                self.FSUBLINK4 = invite_link.invite_link  # Store the join request link
             except Exception as e:
                 error_message = (
                     f"Bot encountered an issue:\n{e}\n"

